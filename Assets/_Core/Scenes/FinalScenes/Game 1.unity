@@ -24845,6 +24845,9 @@ GameObject:
   - component: {fileID: 543450652262588007}
   - component: {fileID: 3469287838395126210}
   - component: {fileID: 1711813854332134664}
+  - component: {fileID: 3469287838395126212}
+  - component: {fileID: 3469287838395126213}
+  - component: {fileID: 3469287838395126211}
   m_Layer: 0
   m_Name: Trampoline
   m_TagString: Untagged
@@ -38667,6 +38670,62 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148343014621}
+  m_Mesh: {fileID: 6946649066338831269, guid: 0c24448bbc1dd04448ed0eb46aea9dfb, type: 3}
+--- !u!114 &3469287838395126211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148343014621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28976949a7e5414ea83d466b9005bbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _force: 15
+--- !u!135 &3469287838395126212
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148343014621}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: -0.2}
+--- !u!64 &3469287838395126213
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148343014621}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 6946649066338831269, guid: 0c24448bbc1dd04448ed0eb46aea9dfb, type: 3}
 --- !u!33 &3469287838431975938
 MeshFilter:
