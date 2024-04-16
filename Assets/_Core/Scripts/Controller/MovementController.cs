@@ -56,6 +56,12 @@ public class MovementController : MonoBehaviour
         }
     }
 
+    public void AddUpwardForce(float force)
+    {
+        _characterVelocity.y += force;
+        Debug.Log(_characterVelocity.y);
+    }
+
     public void SetAxisMovement(Vector2 axis)
     {
         _axisMovement = axis;
