@@ -6,11 +6,11 @@ using UnityEngine;
     typeof(CharacterController))]
 public class AnimationController : MonoBehaviour
 {
+    public Vector2 Axis { get; set; }
+    
     private Animator _animator;
     private CharacterController _characterController;
     
-    public Vector2 Axis { get; set; }
-
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -18,11 +18,6 @@ public class AnimationController : MonoBehaviour
     }
 
     private void Update()
-    {
-        AnimationMove();
-    }
-
-    private void AnimationMove()
     {
         if (Axis.x != 0 && Mathf.Abs(_characterController.velocity.y) < .01f || Axis.y != 0 && Mathf.Abs(_characterController.velocity.y) < .01f)
         {

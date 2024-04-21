@@ -18,7 +18,6 @@ public class GrapnelController : MonoBehaviour
     [SerializeField] private LayerMask _layerMaskToGrape;
     [SerializeField] private UnityEvent<bool> _callbaks;
     
-    private CharacterController _characterController;
     private MovementController _movementController;
     private Animator _animator;
     private LineRenderer _lineRenderer;
@@ -35,11 +34,9 @@ public class GrapnelController : MonoBehaviour
     private void Awake()
     {
         _movementController = GetComponent<MovementController>();
-        _characterController = GetComponent<CharacterController>();
         _startPoint = GetComponentInChildren<Camera>().transform;
         
         _lineRenderer = GetComponent<LineRenderer>();
-        _lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
         _lineRenderer.alignment = LineAlignment.View;
 
         _animator = GetComponent<Animator>();

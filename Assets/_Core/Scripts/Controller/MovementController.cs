@@ -4,6 +4,11 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class MovementController : MonoBehaviour
 {
+    public bool IsLocked { get; set; }
+    
+    [SerializeField] private float _speedMovement = 5;
+    [SerializeField] private float _jumpForce = 1;
+    
     private CharacterController _characterController;
     
     private Vector3 _axisMovement = Vector3.zero;
@@ -11,11 +16,7 @@ public class MovementController : MonoBehaviour
     
     private float _gravity = -9.81f;
     private bool _isGrounded = false;
-    public bool IsLocked { get; set; }
-
-    [SerializeField] private float _speedMovement = 5;
-    [SerializeField] private float _jumpForce = 1;
-
+    
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
@@ -53,6 +54,12 @@ public class MovementController : MonoBehaviour
         {
             _characterVelocity.y += Mathf.Sqrt(_jumpForce * -3.0f * _gravity);
         }
+    }
+
+    public void AddUpwardForce(float force)
+    {
+        _characterVelocity.y += force;
+        Debug.Log(_characterVelocity.y);
     }
 
     public void SetAxisMovement(Vector2 axis)

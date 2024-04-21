@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private Vector2 _axisMovement = Vector2.zero;
-    private float _rotationY;
-    private float _rotationX;
+    public float Sensibility { get; set; }
     
     [SerializeField] private float _cameraClamp;
-    public float Sensibility { get; set; }
+    
+    private Vector2 _axisMovement = Vector2.zero;
+    
+    private float _rotationY;
+    private float _rotationX;
 
     private void Update()
     {
