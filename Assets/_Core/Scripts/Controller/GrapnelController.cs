@@ -14,6 +14,7 @@ public class GrapnelController : MonoBehaviour
     [SerializeField] private float _cooldownSpeed = 1;
     [SerializeField] private float _distanceStopGrap = 3;
     [SerializeField] private int _distanceToRay = 100;
+    [SerializeField] private GameObject _vfxGrapnel;
     [SerializeField] private Transform _lineStart;
     [SerializeField] private LayerMask _layerMaskToGrape;
     [SerializeField] private UnityEvent<bool> _callbaks;
@@ -52,6 +53,11 @@ public class GrapnelController : MonoBehaviour
             _linePosition[0] = _lineStart.position;
             _linePosition[1] = _hitPoint;
             _lineRenderer.SetPositions(_linePosition);
+            _vfxGrapnel.SetActive(true);
+        }
+        else
+        {
+            _vfxGrapnel.SetActive(false);
         }
 
         if (!_goToHitpoint && _cooldownToActivate < 100)
